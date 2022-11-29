@@ -36,9 +36,16 @@
  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 </head>
 <body>
+ <time id="modify"></time>
  <script>
- document.lastModified
- <script tipe="text/javascript"><!--document.write('最終更新日:'+document.lastModified);//-->
+ /* 更新日の取得 */
+const last = new Date(document.lastModified);
+const year = last.getFullYear();
+const month = last.getMonth() + 1;
+const date = last.getDate();
+/* 日付を書き換える */
+const target = document.getElementById('modify');
+target.textContent = year + '-' + month + '-' + date;
  </script>
  <h1>生態系を活用した防災・減災</h1>
 <p>本記事では生態系を活用した防災・減災が生態系と社会に与える影響や、実際の事例について紹介する。<br>
